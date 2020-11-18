@@ -60,3 +60,6 @@ class Test_002_DDT_Login:
                 self.logger.info("**** Login DDT test failed ******")
                 self.driver.close()
                 assert False
+        
+        self.logger.info(" ********* End of Login DDT Test *********")
+        self.logger.info(" ******************* Completed TC_LOGINDDT_002 Test ********")
