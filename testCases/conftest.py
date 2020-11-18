@@ -18,6 +18,8 @@ def setup(browser):
     elif browser == 'opera':
         driver = webdriver.Opera()
         print("Launching Opera browser...................")
+    else:
+        driver = webdriver.Chrome()
     return driver
 
 def pytest_addoption(parser):
@@ -26,3 +28,23 @@ def pytest_addoption(parser):
 @pytest.fixture()
 def browser(request):
     return request.config.getoption("--browser")
+
+
+
+'''
+pytest html report
+'''
+#it is a hook for adding environment info to the html report
+def pytest_configure(config):
+    config._metadata['Project Name'] = 'nop Commerce'
+    config._metadata['Module Name'] = 'Customers'
+    config._metadata['Tester'] = 'Pavan'
+
+# it is a hook for delete/modify environment info to html report
+@pytest.mark.optionalhook
+def pytest_metadata(metadata):
+    metadata.pop("JAVA_HOME", None)
+    metadata.pop("Plugins", None)
+
+
+ 
