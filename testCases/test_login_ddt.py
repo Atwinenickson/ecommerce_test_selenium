@@ -7,7 +7,7 @@ import time
 
 class Test_002_DDT_Login:
     baseURL = ReadConfig.getApplicationURL()
-    path = ".//TestData/LoginData.ods"
+    path = ".//TestData/LoginData.xlsx"
 
     logger = LogGen.loggen()
     def test_login_ddt(self, setup):
@@ -52,14 +52,14 @@ class Test_002_DDT_Login:
                     self.logger.info("******* Passed *******")
                     lst_status.append("Pass")
 
-            if "Fail" not in lst_status:
-                self.logger.info("****** Login DDT test passed ********")
-                self.driver.close()
-                assert True
-            else:
-                self.logger.info("**** Login DDT test failed ******")
-                self.driver.close()
-                assert False
+        if "Fail" not in lst_status:
+            self.logger.info("****** Login DDT test passed ********")
+            self.driver.close()
+            assert True
+        else:
+            self.logger.info("**** Login DDT test failed ******")
+            self.driver.close()
+            assert False
         
         self.logger.info(" ********* End of Login DDT Test *********")
         self.logger.info(" ******************* Completed TC_LOGINDDT_002 Test ********")
