@@ -4,8 +4,10 @@ from selenium.webdriver.support.ui import Select
 
 class AddCustomer:
     # Add customer Page
-    lnkCustomers_menu_xpath = "//a[@href='#']//span[contains(text(),'Customers')]"
-    lnkCustomers_menuitem_xpath = "//span[@class='menu-item-title'][contains(text(),'Customers')]"
+    # lnkCustomers_menu_xpath = "//a[@href='#']//span[contains(text(),'Customers')]"
+    # lnkCustomers_menuitem_xpath = "//span[@class='menu-item-title'][contains(text(),'Customers')]"
+    lnkCustomers_menu_xpath = "//body/div[3]/div[2]/div[1]/ul[1]/li[4]/a[1]/span[1]"
+    lnkCustomers_menuitem_xpath = "//body/div[3]/div[2]/div[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/span[1]"
     btnAddnew_xpath = "//a[@class='btn bg-blue']"
     txtEmail_xpath = "//input[@id='Email']"
     txtPassword_xpath = "//input[@id='Password']"
