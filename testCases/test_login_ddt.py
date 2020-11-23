@@ -1,3 +1,4 @@
+import pytest
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
@@ -10,6 +11,8 @@ class Test_002_DDT_Login:
     path = ".//TestData/LoginData.xlsx"
 
     logger = LogGen.loggen()
+
+    @pytest.mark.regression
     def test_login_ddt(self, setup):
         self.logger.info(" ************* Test__002__DDT__Login*********** ")
         self.logger.info(" ******************** Veryfying after login ddt test title *************** ")

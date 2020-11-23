@@ -5,21 +5,26 @@ import pytest
 def setup(browser):
     if browser == 'chrome':
         driver = webdriver.Chrome()
+        driver.implicitly_wait(20) # seconds
         print("Launching Chrome browser...................")
     elif browser == 'firefox':
         driver = webdriver.Firefox()
+        driver.implicitly_wait(20) # seconds
         print("Launching Firefox browser............")
     elif browser == 'brave':
         driver = webdriver.Chrome()
+        driver.implicitly_wait(20) # seconds
         print("Launching Brave browser...................")
     elif browser == 'ie':
         driver = webdriver.Ie()
         print("Launching IE browser...................")
     elif browser == 'opera':
         driver = webdriver.Opera()
+        driver.implicitly_wait(20) # seconds
         print("Launching Opera browser...................")
     else:
         driver = webdriver.Chrome()
+        driver.implicitly_wait(20) # seconds
     return driver
 
 def pytest_addoption(parser):

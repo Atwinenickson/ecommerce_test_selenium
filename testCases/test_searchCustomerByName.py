@@ -37,7 +37,7 @@ class Test_SearchCusomerByName_005:
         searchcust.setFirstName("Victoria")
         searchcust.setLastName("Terces")
         searchcust.clickSearch()
-        time.sleep(10)
+        time.sleep(5)
         status=searchcust.searchCustomerByName('Victoria Terces')
         assert False == status
         self.logger.info("************************* TC_SearchCustomerByName_005 finished **************")

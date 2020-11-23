@@ -8,6 +8,7 @@ class AddCustomer:
     # lnkCustomers_menuitem_xpath = "//span[@class='menu-item-title'][contains(text(),'Customers')]"
     lnkCustomers_menu_xpath = "//body/div[3]/div[2]/div[1]/ul[1]/li[4]/a[1]/span[1]"
     lnkCustomers_menuitem_xpath = "//body/div[3]/div[2]/div[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/span[1]"
+    # lnkCustomers_menuitem_path = "span.menu-item-title"
     btnAddnew_xpath = "//a[@class='btn bg-blue']"
     txtEmail_xpath = "//input[@id='Email']"
     txtPassword_xpath = "//input[@id='Password']"
@@ -34,6 +35,7 @@ class AddCustomer:
     
     def clickOnCustomersMenuItem(self):
         self.driver.find_element_by_xpath(self.lnkCustomers_menuitem_xpath).click()
+        # self.driver.find_element_by_css_selector(self.lnkCustomers_menuitem_path).click()
 
     def clickOnAddnew(self):
         self.driver.find_element_by_xpath(self.btnAddnew_xpath).click()
