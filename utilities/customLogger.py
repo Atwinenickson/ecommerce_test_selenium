@@ -10,7 +10,7 @@ class LogGen:
     def loggen():
         for handler in logging.root.handlers[:]:
             logging.root.removeHandler(handler)
-            logging.basicConfig(filename=filename,
+            logging.basicConfig(filename=".\\Logs\\automation.log",
                                 format='%(asctime)s: %(levelname)s: %(message)s',force=True,
                                 )
             logger = logging.getLogger()
