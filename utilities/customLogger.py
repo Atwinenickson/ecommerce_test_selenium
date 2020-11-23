@@ -1,7 +1,8 @@
 import logging
 import os
 
-filename =  os.path.abspath("Logs/automation.log")
+# filename =  os.path.abspath("Logs/automation.log")
+filename=".//Logs//automation.log"
 print(filename)
 
 class LogGen:
