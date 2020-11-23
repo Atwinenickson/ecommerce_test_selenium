@@ -40,16 +40,16 @@ def browser(request):
 pytest html report
 '''
 #it is a hook for adding environment info to the html report
-def pytest_configure(config):
-    config._metadata['Project Name'] = 'nop Commerce'
-    config._metadata['Module Name'] = 'Customers'
-    config._metadata['Tester'] = 'Pavan'
+# def pytest_configure(config):
+#     config._metadata['Project Name'] = 'nop Commerce'
+#     config._metadata['Module Name'] = 'Customers'
+#     config._metadata['Tester'] = 'Pavan'
 
 # it is a hook for delete/modify environment info to html report
-@pytest.mark.optionalhook
-def pytest_metadata(metadata):
-    metadata.pop("JAVA_HOME", None)
-    metadata.pop("Plugins", None)
+# @pytest.mark.optionalhook
+# def pytest_metadata(metadata):
+#     metadata.pop("JAVA_HOME", None)
+#     metadata.pop("Plugins", None)
 
 
  
